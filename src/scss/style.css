@@ -3,31 +3,32 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 body.light {
-  background-color: #fff;
-  color: #0000;
+  background-color: #fafafa;
+  color: #202c37;
 }
 
 body.light h1 {
-  color: black;
+  color: #202c37;
 }
 
 body.light p {
-  color: black;
+  color: #202c37;
 }
 
 body.dark {
   background-color: #292828;
-  color: #fff;
+  color: white;
 }
 
 body.dark .cards {
-  background-color: indigo;
+  background-color: #2b3945;
   position: relative;
   z-index: -1;
-  color: #fff;
+  color: white;
 }
 
 header {

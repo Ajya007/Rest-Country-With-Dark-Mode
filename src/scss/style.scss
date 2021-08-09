@@ -5,34 +5,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 
 }
 
 
-$primary:#fff;
+$primary:hsl(0, 0%, 98%);
 $secondary:#0000;
 
 
 body.light{
-    background-color: $primary;
-    color:$secondary;
+    background-color: hsl(0, 0%, 98%);
+   color:hsl(207, 26%, 17%);
     h1{
-        color: rgb(0, 0, 0);
+        color: hsl(207, 26%, 17%);
     }
    p{
-       color: black;
+       color: hsl(207, 26%, 17%);
    }
   
 }
 
 body.dark{
     background-color:rgb(41, 40, 40);
-    color:#fff;
+    color:hsl(0, 0%, 100%);
     .cards{
-        background-color: indigo;
+        background-color:  hsl(209, 23%, 22%);
         position: relative;
         z-index: -1;
-        color:#fff;
+        color:hsl(0, 0%, 100%);
     }
     
  

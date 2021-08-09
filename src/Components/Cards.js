@@ -10,9 +10,9 @@ function Cards({el,clickHandler}) {
         <div className='cards' onClick={() => clickHandler(el.name)}>
             <img src={el.flag}></img>
         <h1>{el.name}</h1>
-        <p>population:{el.population}</p>
-        <p>region:{el.region}</p>
-        <p>capital:{el.capital}</p>
+        <p><span style={{fontWeight:600}}>Population:</span> {el.population}</p>
+        <p><span style={{fontWeight:600}}>Region: </span>{el.region}</p>
+        <p><span style={{fontWeight:600}}>Capital:</span>{el.capital}</p>
         </div>
         </Link>
     )

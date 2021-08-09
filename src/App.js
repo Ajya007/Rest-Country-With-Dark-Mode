@@ -16,7 +16,7 @@ console.log(filtredData)
 
 const clickHandler = (id) =>{
 
- setFiltredData(contries.filter(element => element.name == id ))
+ setFiltredData(contries.filter(element => element.name === id ))
 }
 useEffect(() =>{
 
