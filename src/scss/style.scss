@@ -1,0 +1,67 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+$primary:#fff;
+$secondary:#0000;
+
+
+body.light{
+    background-color: $primary;
+    color:$secondary;
+    h1{
+        color: rgb(0, 0, 0);
+    }
+   p{
+       color: black;
+   }
+  
+}
+
+body.dark{
+    background-color:rgb(41, 40, 40);
+    color:#fff;
+    .cards{
+        background-color: indigo;
+        position: relative;
+        z-index: -1;
+        color:#fff;
+    }
+    
+ 
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+
+}
+
+.card{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    cursor: pointer;
+    text-decoration: none;
+
+    img{
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
