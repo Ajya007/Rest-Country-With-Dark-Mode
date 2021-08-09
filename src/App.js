@@ -35,11 +35,13 @@ useEffect(() =>{
      <>
 
 <Router>
+<div className="container">
      <header>
        <h1>Where in the world?</h1>
        <Darkmode />
 
        </header>
+      
 
        <Route path="/" exact render={(props) =>(
       <Card  
@@ -52,7 +54,7 @@ useEffect(() =>{
       filtredData={filtredData}
        />
        )} />
-
+</div>
 
 
 </Router>

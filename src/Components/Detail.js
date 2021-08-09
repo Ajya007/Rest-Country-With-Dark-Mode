@@ -5,7 +5,7 @@ function Detail() {
     return (
         <div className="detail">
             
-            <Link to="/">Go Back</Link>
+            <Link to="/"style={{textDecoration:'none'}}><button className="back">Go Back</button></Link>
 
             
         </div>
