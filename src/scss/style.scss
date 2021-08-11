@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    line-height: 1.6;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
 
@@ -15,17 +16,38 @@
     margin: auto;
 }
 
+.main-sec{
+    margin-top: 2rem;
+    .select{
+        text-align: right;
+        margin-right: 1rem;
+        .filter-lists{
+        padding:0.3rem;
+        outline:none;
+        
+        }
+    }
+}
+
 #darkMode{
     border: none;
     background: transparent;
+    outline:none;
+    cursor: pointer;
+
 }
 
+.back{
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
 
 body.light{
+    .cards{
+        border: 0.1px solid rgba(112, 109, 109, 0.185);
+    }
 
     .back{
-        margin-top: 2rem;
-        margin-left: 1rem;
         font-weight: 600;
         background-color: hsl(0, 0%, 98%);
         color:hsl(207, 26%, 17%);
@@ -43,13 +65,23 @@ body.light{
        color: hsl(207, 26%, 17%);
    }
   
+   
+        .filter-lists{
+            color: hsl(207, 26%, 17%);
+            background-color: hsl(0, 0%, 98%);
+        
+        }
+    
+
 }
 
 body.dark{
-
+    .filter-lists{
+        color:hsl(0, 0%, 98%);
+        background-color: hsl(207, 26%, 17%);
+    
+    }
     .back{
-        margin-top: 2rem;
-        margin-left: 1rem;
         font-weight: 600;
         background-color: hsl(209, 23%, 22%); 
         color:hsl(0, 0%, 98%);
@@ -66,6 +98,7 @@ body.dark{
     background-color:rgb(41, 40, 40);
     color:hsl(0, 0%, 100%);
     .cards{
+      
         background-color:  hsl(209, 23%, 22%);
         position: relative;
         z-index: -1;
@@ -88,6 +121,8 @@ header{
 }
 
 .card{
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -122,6 +157,27 @@ header{
    
 }
 
+//detail page
+
+
+.country-detail{
+    display: flex;
+    gap:2rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    img{
+        max-width: 400px;
+    }
+
+    .part{
+        display: flex;
+        gap:1rem;
+    }
+
+
+  
+}
+
 
 //mobile
 
@@ -143,6 +199,31 @@ header{
         margin:0.8rem auto;
     }
 
+
+    .country-detail{
+        display: block;
+        gap:2rem;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        img{
+            max-width: 200px;
+        }
+    
+        .part{
+            display: block;
+          
+    
+    
+      
+    }
+
+}
+
+
+.back{
+    margin-top: 4rem;
+    margin-left: 1rem;
+}
 }
 
 //tablets
@@ -193,6 +274,33 @@ header{
        
     }
 
+
+    .country-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        img{
+            max-width: 300px;
+        }
+    
+        .part{
+            display: block;
+          
+    
+    
+      
+    }
+
+}
+
+
+.back{
+    margin-top: 4rem;
+    margin-left: 1rem;
+}
 
 
 }
