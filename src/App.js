@@ -40,7 +40,6 @@ const filterHandler =() => {
              setFilteredCountries(contries);
               break;
      default:
-       setFilteredCountries(contries);
        break;
   }
 };
