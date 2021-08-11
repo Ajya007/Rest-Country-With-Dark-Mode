@@ -10,14 +10,12 @@ function App() {
 const [contries,setContries]=useState([])
 const [filtredData,setFiltredData]=useState([])
 const [filterState,setFilterState]=useState(false)
-const [status,setStatus]=useState('')
+const [status,setStatus]=useState('All')
 const [filtredcountries,setFilteredCountries] = useState([])
 
+console.log(filtredData)
 
 
-useEffect(() => {
-  filterHandler();
-},[status]);
 
    
 
@@ -47,14 +45,16 @@ const filterHandler =() => {
   }
 };
 
+useEffect(() => {
+  filterHandler();
+},[status]);
 
 
 
 
+const clickHandler = async(id) =>{
 
-const clickHandler = (id) =>{
-
-const data=filtredcountries.filter(element => element.name === id )
+const data= await filtredcountries.filter(element => element.name === id )
 
 setFiltredData(data)
 setFilterState(true)
