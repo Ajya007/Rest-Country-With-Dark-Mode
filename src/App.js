@@ -45,7 +45,9 @@ const filterHandler = () => {
 };
 
 useEffect(() => {
-  filterHandler();
+  if(status){
+     filterHandler();
+  }
 },[status]);
 
 
