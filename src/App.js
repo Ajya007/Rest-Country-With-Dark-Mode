@@ -19,7 +19,7 @@ console.log(filtredData)
 
    
 
-const filterHandler =() => {
+const filterHandler = () => {
   switch (status){
     case 'Asia':
       setFilteredCountries(contries.filter(el => el.region === 'Asia'));
