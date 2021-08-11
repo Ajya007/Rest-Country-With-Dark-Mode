@@ -44,11 +44,14 @@ const filterHandler = () => {
   }
 };
 
+   {/*eslint-enable */}
 useEffect(() => {
   if(status){
      filterHandler();
   }
 },[status]);
+   
+    {/*eslint-disable */}
 
 
 
