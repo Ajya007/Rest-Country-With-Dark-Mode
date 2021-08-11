@@ -7,48 +7,41 @@ import {BrowserRouter as Router,Route} from 'react-router-dom'
 import Detail from './Components/Detail.js'
 
 function App() {
-const [contries,setContries]=useState([])
 const [filtredData,setFiltredData]=useState([])
 const [filterState,setFilterState]=useState(false)
-const [status,setStatus]=useState('All')
+const [status,setStatus]=useState('all')
 const [filtredcountries,setFilteredCountries] = useState([])
 
-console.log(filtredData)
 
 
 
    
 
-const filterHandler =() => {
-  switch (status){
-    case 'Asia':
-      setFilteredCountries(contries.filter(el => el.region === 'Asia'));
-      break;
-     case 'Americas':
-       setFilteredCountries(contries.filter(el => el.region === 'Americas'));
-       break;
-       case 'Africa':
-        setFilteredCountries(contries.filter(el => el.region === 'Africa'));
-        break;
-        case 'Europe':
-          setFilteredCountries(contries.filter(el => el.region === 'Europe'));
-          break;
-          case 'Oceania':
-            setFilteredCountries(contries.filter(el => el.region === 'Oceania'));
-            break;
-            case 'All':
-             setFilteredCountries(contries);
-              break;
-     default:
-       setFilteredCountries(contries);
-       break;
-  }
-};
-
 useEffect(() => {
-  filterHandler();
-},[status]);
+if(status){
 
+  if(status==="all"){
+    const fetchData= async() => {
+      const res=await axios('https://restcountries.eu/rest/v2/all'); 
+      setFilteredCountries(res.data);
+      
+      }
+      fetchData();
+  
+
+  }else{
+  const fetchFiltredData= async() => {
+    const res=await axios(`https://restcountries.eu/rest/v2/region/${status}`); 
+    setFilteredCountries(res.data);
+    
+    }
+    fetchFiltredData();
+  }
+  }
+   
+  
+ 
+}, [status])
 
 
 
@@ -67,18 +60,6 @@ setFilterState(true)
 
 
 
-useEffect(() =>{
-
-  const fetchData= async() => {
-    const res=await axios('https://restcountries.eu/rest/v2/all'); 
-    console.log(res)
-    setContries(res.data)
-    setFilteredCountries(res.data);
-    
-    }
-    fetchData();
-
-},[])
 
   return (
 

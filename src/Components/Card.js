@@ -12,7 +12,7 @@ function Card({filtredcountries,clickHandler,setStatus}) {
         <div className="main-sec">
                <div className='select'>
                 <select onChange={statusHandler} name='lists' className='filter-lists'>
-                 <option value='All'>All</option>
+                 <option value='all'>All</option>
                     <option value='Africa'>Africa</option>
                     <option value='Americas'>Americas</option>
                     <option value='Asia'>Asia</option>
